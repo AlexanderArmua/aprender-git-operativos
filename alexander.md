@@ -1,5 +1,4 @@
 ## Modificación hecha en branch Kernel
-
 # Linked List
 ```c
 #include <stdio.h>
