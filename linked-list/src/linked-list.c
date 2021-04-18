@@ -11,7 +11,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <commons/string.h>
-#include <string.h>
 #include "linkedList.h"
 #include "boludeces.h"
 

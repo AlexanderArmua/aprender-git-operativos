@@ -5,6 +5,8 @@
  *      Author: utnso
  */
 
+#include <stdio.h>
+#include <string.h>
 #include "boludeces.h"
 
 void aumentar_habitantes(casa * c) {
