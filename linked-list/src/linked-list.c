@@ -12,23 +12,13 @@
 #include <stdlib.h>
 #include <commons/string.h>
 #include <string.h>
+#include "linkedList.h"
+#include "boludeces.h"
 
-#include"CUnit/Basic.h"
-
-typedef struct {
-	char * direccion;
-	int habitantes;
-} casa;
-
-void aumentar_habitantes(casa*);
-void setear_habitantes(casa*, int);
-void imprimir(casa*);
-
-void asignar_ip(char**);
-
-void asignar_numero(int*);
 
 int main(void) {
+	printf("--%d--", dameAlgo());
+
 	// 01 START - String modify
 	char * stringg = string_new();
 	string_append(&stringg, "TEsting this");
@@ -70,23 +60,4 @@ int main(void) {
 	return EXIT_SUCCESS;
 }
 
-void aumentar_habitantes(casa * c) {
-	c->habitantes ++;
-}
-void setear_habitantes(casa *c, int habitantes) {
-	c->habitantes = habitantes;
-}
-
-void imprimir(casa * c) {
-	printf("HAbitantes: %i\n", c->habitantes);
-	printf("Direccion: %s\n", c->direccion);
-}
-
-void asignar_ip(char ** ip) { // jaja salu2
-	strcpy(*ip, "127.0.0.1");
-}
-
-void asignar_numero(int * n) {
-	*n = 100;
-}
 

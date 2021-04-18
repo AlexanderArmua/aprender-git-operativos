@@ -4,13 +4,22 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../src/linked-list.c 
+../src/boludeces.c \
+../src/linked-list.c \
+../src/linkedList.c 
+
+O_SRCS += \
+../src/linked-list.o 
 
 OBJS += \
-./src/linked-list.o 
+./src/boludeces.o \
+./src/linked-list.o \
+./src/linkedList.o 
 
 C_DEPS += \
-./src/linked-list.d 
+./src/boludeces.d \
+./src/linked-list.d \
+./src/linkedList.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
