@@ -21,7 +21,7 @@ void imprimir(casa * c) {
 	printf("Direccion: %s\n", c->direccion);
 }
 
-void asignar_ip(char ** ip) { // jaja salu2
+void asignar_ip(char ** ip) {
 	strcpy(*ip, "127.0.0.1");
 }
 
