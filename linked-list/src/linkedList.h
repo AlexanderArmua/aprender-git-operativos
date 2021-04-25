@@ -32,13 +32,13 @@ typedef struct List {
 list_t* create_list();
 
 /**
- * @NAME: size
+ * @NAME: size_list
  * @DESC: Retorna la cantidad de elementos de la lista
  */
 unsigned int size_list(list_t * list);
 
 /**
- * @NAME: peek
+ * @NAME: peek_list
  * @DESC: Retorna el primer elemento sin sacarlo de la lista
  */
 void * peek_list(list_t * list);

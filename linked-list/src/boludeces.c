@@ -22,7 +22,7 @@ void imprimir(casa * c) {
 }
 
 void asignar_ip(char ** ip) {
-	strcpy(*ip, "127.0.0.1");
+	strcpy(*ip, "128.0.0.1");
 }
 
 void asignar_numero(int * n) {

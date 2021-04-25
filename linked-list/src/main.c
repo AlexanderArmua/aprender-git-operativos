@@ -16,18 +16,22 @@
 
 void boludeando();
 
-void hacer_cosas_con_lista(list_t * list);
+void hacer_cosas_con_lista();
+
+void hacer_cosas_con_hilos();
 
 
 int main(void) {
 
-	list_t * list = create_list();
-
-	hacer_cosas_con_lista(list);
+	hacer_cosas_con_lista();
 
 	//boludeando();
 
 	return EXIT_SUCCESS;
+}
+
+void hacer_cosas_con_hilos() {
+
 }
 
 /**
@@ -39,7 +43,9 @@ int main(void) {
  * 5. Termina de recorrer y dejamos un elemento sin borrar para probar que se libere solo.
  * 6. Llamamos a la funcion clear_list para que limpie solo lo faltante.
  */
-void hacer_cosas_con_lista(list_t * list) {
+void hacer_cosas_con_lista() {
+	list_t * list = create_list();
+
 	printf("-----List Size: %d-----\n", size_list(list));
 
 	for (int i = 1; i <= 3; i++) {
@@ -56,7 +62,7 @@ void hacer_cosas_con_lista(list_t * list) {
 
 	printf("-----List Size: %d-----\n", size_list(list));
 
-	for (int i = 0; i < 3; i++) {
+	for (int i = 0; i < 2; i++) {
 		int * first_value = (int *) pop_list(list);
 
 		printf(" [ %d ] -->", *first_value);
@@ -107,4 +113,40 @@ void boludeando() {
 	free(ip);
 	free(numero);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

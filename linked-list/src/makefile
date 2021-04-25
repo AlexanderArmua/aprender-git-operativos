@@ -1,4 +1,6 @@
-TARGET := aprender_c.out # Nombre del archivo al compilar 
+# CODIGO PRINCIPAL
+
+TARGET := ../aprender_c.out # Nombre del archivo al compilar 
 LIBS := -lreadline -lcommons -lcspecs # Dependencias necesarias
 CC := gcc # Compilador a utilizar
 CFLAGS := -g -Wall # Flags en la comilación (g: Debug) (Wall: Muestra todos los warnings)

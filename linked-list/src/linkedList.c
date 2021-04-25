@@ -15,7 +15,7 @@ int existe_un_elemento(list_t * list);
 
 list_t* create_list() {
 	// Es el equivalente a hacer "new LinkedList()" en Java
-	list_t * list = (list_t *) malloc(sizeof(list_t));
+	list_t * list = malloc(sizeof(list_t));
 
 	list->size = 0;
 	list->first_node = NULL;
@@ -57,6 +57,10 @@ void * pop_list(list_t * list) {
 		// Hacemos que el primer elemento de la lista apunte al que guardamos como siguiente.
 		list->first_node = next;
 
+		if (next == NULL) {
+			list->last_node = NULL;
+		}
+
 		// Si salió bien, restamos uno en el contador.
 		list->size--;
 	}
@@ -64,19 +68,18 @@ void * pop_list(list_t * list) {
 	return value_return;
 }
 
-
 void push_last_list(list_t * list, void * value) {
 	node_t * node = get_node_value(value);
 
 	// Si no existen elementos, metemos el nodo y que first y last apunten a el.
-	if (!existe_un_elemento(list)) {
-		list->first_node = node;
-		list->last_node = node;
-	} else {
+	if (existe_un_elemento(list)) {
 		// Ya existe primer elemento, entonces el siguiente del ultimo es igual al nodo.
 		list->last_node->next = node;
 		// El nuevo ultimo es igual a nodo.
 		list->last_node = list->last_node->next;
+	} else {
+		list->first_node = node;
+		list->last_node = node;
 	}
 
 	list->size++;
